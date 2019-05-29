@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Entity.Pago>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NroTransaccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaTransaccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contrato.ContratoId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroTransaccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaTransaccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contrato.ContratoId)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.PagoId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.PagoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.PagoId })
+        </td>*@
+    </tr>
+}
+
+</table>

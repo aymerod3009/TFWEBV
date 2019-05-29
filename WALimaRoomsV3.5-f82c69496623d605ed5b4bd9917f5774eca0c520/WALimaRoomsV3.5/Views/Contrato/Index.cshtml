@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Entity.Contrato>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.NombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.apellPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cliente.apellMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inmobiliario.NombreInmobiliario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inmobiliario.DireccionInmobiliario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaFin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaPago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inmobiliario.Precio)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.apellPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cliente.apellMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inmobiliario.NombreInmobiliario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inmobiliario.DireccionInmobiliario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaFin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaPago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.inmobiliario.Precio)
+        </td>
+
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ContratoId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ContratoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ContratoId })
+        </td>*@
+    </tr>
+}
+
+</table>

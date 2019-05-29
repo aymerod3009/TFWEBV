@@ -1,0 +1,82 @@
+﻿@model Entity.Cliente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellPaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellPaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellMaterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellMaterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nacionalidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefono)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NroDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoDocumento.NombreTipoDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoDocumento.NombreTipoDocumento)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

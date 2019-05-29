@@ -1,0 +1,45 @@
+﻿@model Entity.Pago
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pago</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NroTransaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NroTransaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaTransaccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaTransaccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contrato.ContratoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contrato.ContratoId)
+        </dd>
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PagoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

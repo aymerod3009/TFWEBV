@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Entity.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellPaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellMaterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nacionalidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefono)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Correo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NroDocumento)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.tipoDocumento.NombreTipoDocumento)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellPaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellMaterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nacionalidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefono)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NroDocumento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoDocumento.NombreTipoDocumento)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ClienteId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ClienteId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ClienteId })
+        </td>*@
+    </tr>
+}
+
+</table>
